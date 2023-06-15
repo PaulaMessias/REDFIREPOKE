@@ -1,17 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Pokedex</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="container">
-    <h1>Pokedex</h1>
-    <input type="text" id="searchInput" placeholder="Digite o nome ou código do Pokemon">
-    <button onclick="searchPokemon()">Pesquisar</button>
-    <div id="pokemonInfo"></div>
-  </div>
-  
-  <script src="script.js"></script>
-</body>
+  <body>
+    <div class="background"></div>
+    <div class="header">
+      <img src="img/pokemon-logo.png" alt="Pokémon Logo">
+    </div>
+    <div class="pokemon-details" id="pokemonDetails"></div>
+    <div class="main-content">
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Pesquisar Pokémon">
+        <button onclick="searchPokemon()">Buscar</button>
+      </div>
+      <div class="pokemon-list" id="pokemonList"></div>
+    </div>
+    <div class="pokemon-details" id="pokemonDetails"></div>
+    
+    <div class="footer">
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th class="position">Type</th>
+              <th class="position">Forte Contra</th>
+              <th class="position">Fraco Contra</th>
+              <th class="position">Resistente a</th>
+              <th class="position">Vulnerável a</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Conteúdo da tabela -->
+            <tr>
+              <td>Fighting</td>
+              <td>Normal, Rock, Steel, Ice, Dark</td>
+              <td>Flying, Poison, Psychic, Bug, Ghost, Fairy</td>
+              <td>Rock, Bug, Dark</td>
+              <td>Flying, Psychic, Fairy</td>
+            </tr>
+            <tr>
+              <td>Flying</td>
+              <td>Fighting, Bug, Grass</td>
+              <td>Rock, Steel, Electric</td>
+              <td>Fighting, Ground, Bug, Grass</td>
+              <td>Rock, Electric, Ice</td>
+            </tr>
+            <tr>
+              <td>Poison</td>
+              <td>Grass, Fairy</td>
+              <td>Poison, Ground, Rock, Ghost, Steel</td>
+              <td>Fighting, Poison, Grass, Fairy</td>
+              <td>Ground, Psychic</td>
+            </tr>
+            <tr>
+              <td>Ground</td>
+              <td>Poison, Rock, Steel, Fire, Electric</td>
+              <td>Flying, Bug, Grass</td>
+              <td>Poison, Rock, Electric</td>
+              <td>Water, Grass, Ice</td>
+            </tr>
+            <tr>
+              <td>Rock</td>
+              <td>Flying, Bug, Fire, Ice</td>
+              <td>Fighting, Ground, Steel</td>
+              <td>Normal, Flying, Poison, Fire</td>
+              <td>Fighting, Ground, Steel, Water, Grass</td>
+            </tr>
+            <tr>
+              <td>Bug</td>
+              <td>Grass, Psychic, Dark</td>
+              <td>Fighting, Flying, Poison, Ghost, Steel, Fire, Fairy</td>
+              <td>Fighting, Ground, Grass</td>
+              <td>Flying, Rock, Fire</td>
+            </tr>
+            <tr>
+              <td>Ghost</td>
+              <td>Ghost, Psychic</td>
+              <td>Normal, Dark</td>
+              <td>Normal, Fighting, Poison, Bug</td>
+              <td>Ghost, Dark</td>
+            </tr>
+            <tr>
+              <td>Steel</td>
+              <td>Rock, Ice, Fairy</td>
+              <td>Steel, Fire, Water, Electric</td>
+              <td>Normal, Flying, Poison, Rock, Bug, Steel, Grass, Psychic, Ice, Dragon, Fairy</td>
+              <td>Fighting, Ground, Fire</td>
+            </tr>
+            <tr>
+              <td>Fire</td>
+              <td>Bug, Steel, Grass, Ice</td>
+              <td>Rock, Fire, Water, Dragon</td>
+              <td>Bug, Steel, Fire, Grass, Ice</td>
+              <td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
