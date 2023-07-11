@@ -80,7 +80,7 @@ function createPokemonCard(pokemonName, pokemonId) {
   pokemonCard.appendChild(imageElement);
   pokemonCard.appendChild(nameElement);
 
-  pokemonCard.addEventListener('click', function() {
+  pokemonCard.addEventListener('click', function () {
     showPokemonDetails(pokemonId);
   });
 
@@ -105,10 +105,10 @@ function showPokemonDetails(pokemonIdentifier) {
 
       var pokemonElement = document.createElement('div');
       pokemonElement.innerHTML = '<h2>' + pokemonName + '</h2>' +
-                                 '<img src="' + pokemonImage + '" alt="' + pokemonName + '">' +
-                                 '<p><strong>Tipo:</strong> ' + pokemonTypes.join(', ') + '</p>' +
-                                 '<p><strong>Fraquezas:</strong> ' + (pokemonWeaknesses.length > 0 ? pokemonWeaknesses.join(', ') : 'None') + '</p>' +
-                                 '<p><strong>Fortalezas:</strong> ' + (pokemonStrengths.length > 0 ? pokemonStrengths.join(', ') : 'None') + '</p>';
+        '<img src="' + pokemonImage + '" alt="' + pokemonName + '" class="img-poke">' +
+        '<p><strong>Tipo:</strong> ' + pokemonTypes.join(', ') + '</p>' +
+        '<p><strong>Fraquezas:</strong> ' + (pokemonWeaknesses.length > 0 ? pokemonWeaknesses.join(', ') : 'None') + '</p>' +
+        '<p><strong>Fortalezas:</strong> ' + (pokemonStrengths.length > 0 ? pokemonStrengths.join(', ') : 'None') + '</p>';
 
       pokemonDetails.appendChild(pokemonElement);
 
