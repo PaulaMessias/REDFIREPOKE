@@ -1,5 +1,5 @@
 # REDFIREPOKE
-Um Pokedex com interface 3D para destacar pontos fortes e fracos dos Pokemons
+Um Pokedex para destacar pontos fortes e fracos dos Pokemons
 Colors:
 Background > #ef5350
 Background-border > #dedede
